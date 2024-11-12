@@ -1,0 +1,152 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to right, #4CAF50, #006400);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 0.75rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* State and Park Sections */
+section h2 {
+    font-size: 2rem;
+    color: #006400;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+}
+
+/* Collapsible Button */
+.collapsible {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.collapsible:hover {
+    background-color: #45a049;
+}
+
+.collapsible.active {
+    background-color: #388e3c;
+}
+
+/* Collapsible Content */
+.content {
+    padding: 1rem 1.5rem;
+    display: none;
+    background-color: #e9f7e9;
+    border-left: 5px solid #4CAF50;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: max-height 0.3s ease-out;
+}
+
+.content p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Adding Smooth Transition for Collapsible */
+.content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+}
+
+.collapsible.active + .content {
+    display: block;
+    max-height: 500px; /* Adjust based on content length */
+}
+
+/* Styling for links in content */
+.content a {
+    color: #006400;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* Footer (Optional) */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
